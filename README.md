@@ -1,4 +1,5 @@
 # Real Estate Property Listing and Offer System
+![Animation-2](https://github.com/Reaper1994/real-estate-laravel-vue/assets/23649642/96474373-eed8-4c81-bbc9-769b1cf23e75)
 
 ## Overview
 
