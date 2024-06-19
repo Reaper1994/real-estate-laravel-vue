@@ -1,9 +1,11 @@
 # Real Estate Property Listing and Offer System
-![Animation-2](https://github.com/Reaper1994/real-estate-laravel-vue/assets/23649642/96474373-eed8-4c81-bbc9-769b1cf23e75)
 
 ## Overview
 
 This project is a demo web application built with Laravel and Vue, I've been itching to try this more modern approach since it's all the rage these days, and I have to say, it's a whole new ballgame compared to the classic Blade or even Livewire methods. My project has the basics covered — user registration, authentication, and authorization with email verification. But wait, there's more! I've also thrown in real-time listing filtering and pagination, image uploading, full-screen image previews, offers and notifications, a real-time interest calculator, and a bunch of other cool features.
+
+## Overview
+![Animation-2](https://github.com/Reaper1994/real-estate-laravel-vue/assets/23649642/96474373-eed8-4c81-bbc9-769b1cf23e75)
 
 ## Features
 
