@@ -15,7 +15,7 @@ This project is a demo web application built with Laravel and Vue, I've been itc
 ## Technologies Used
 
 - **PHP**
-- **Laravel**: v11.
+- **Laravel**: v11.9.
 - **Tailwind CSS**.
 - **Vue.js**.
 - **Inertia.js**.
