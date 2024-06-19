@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is a demo web application built with Laravel and Vue, utilizing email verification to verify accounts, that allows a listing agent to list properties and users to make offers on those properties. The system includes a notification feature to inform listing agents of new offers and users of accepted or rejected offers.
+This project is a demo web application built with Laravel and Vue, I've been itching to try this more modern approach since it's all the rage these days, and I have to say, it's a whole new ballgame compared to the classic Blade or even Livewire methods. My project has the basics covered — user registration, authentication, and authorization with email verification. But wait, there's more! I've also thrown in real-time listing filtering and pagination, image uploading, full-screen image previews, offers and notifications, a real-time interest calculator, and a bunch of other cool features.
 
 ## Features
 
