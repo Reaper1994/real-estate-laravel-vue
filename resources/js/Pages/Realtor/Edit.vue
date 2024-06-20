@@ -18,7 +18,7 @@
       </div>
 
       <div class="col-span-2">
-        <label class="label">Area</label>
+        <label class="label">Area (m²)</label>
         <input v-model.number="form.area" type="text" class="input" />
         <div v-if="form.errors.area" class="input-error">
           {{ form.errors.area }}

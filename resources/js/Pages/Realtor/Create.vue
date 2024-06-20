@@ -18,7 +18,7 @@
       </div>
 
       <div class="col-span-2">
-        <label class="block mb-1 text-gray-500 dark:text-gray-300 font-medium">Area</label>
+        <label class="block mb-1 text-gray-500 dark:text-gray-300 font-medium">Area (m²)</label>
         <input v-model.number="form.area" type="text" class="block w-full p-2 rounded-md shadow-sm border border-gray-300 dark:border-gray-600 text-gray-500" />
         <div v-if="form.errors.area" class="input-error">
           {{ form.errors.area }}
