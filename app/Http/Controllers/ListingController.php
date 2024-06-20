@@ -17,6 +17,7 @@ class ListingController extends Controller
     /**
      * Display a listing of the resource.
      *
+     * @param Request $request
      * @return Response
      */
     public function index(Request $request): Response
@@ -41,15 +42,11 @@ class ListingController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @param Listing $listing
+     * @return \Inertia\ResponseFactory|Response
      */
-    public function show(Listing $listing)
+    public function show(Listing $listing): Response|\Inertia\ResponseFactory
     {
-        // if (Auth::user()->cannot('view', $listing)) {
-        //     abort(403);
-        // }
-        // $this->authorize('view', $listing);
         $listing->load(['images']);
         $offer = !Auth::user() ?
             null : $listing->offers()->byMe()->first();
