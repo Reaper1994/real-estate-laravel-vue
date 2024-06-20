@@ -5,7 +5,7 @@
               <img
                   v-for="image in listing.images" :key="image.id"
                   :src="image.src"
-                  class="w-full h-full object-cover"
+                  class="w-full h-80 object-cover"
               />
           </div>
       </Box>

@@ -25,52 +25,64 @@
           </option>
         </select>
       </div>
+        <button type="reset" class="btn-primary" @click="clear">Clear</button>
     </div>
   </form>
 </template>
 
 <script setup>
-import { reactive, watch, computed } from 'vue'
-import { router  } from '@inertiajs/vue3'
-import { debounce } from 'lodash'
+import { reactive, watch, computed } from 'vue';
+import { Inertia } from '@inertiajs/inertia'; // Corrected import for Inertia
+import debounce from 'lodash/debounce';
 
 const sortLabels = {
-  created_at: [
-    {
-      label: 'Latest',
-      value: 'desc',
-    },
-    {
-      label: 'Oldest',
-      value: 'asc',
-    },
-  ],
-  price: [
-    {
-      label: 'Pricey',
-      value: 'desc',
-    },
-    {
-      label: 'Cheapest',
-      value: 'asc',
-    },
-  ],
-}
+    created_at: [
+        {
+            label: 'Latest',
+            value: 'desc',
+        },
+        {
+            label: 'Oldest',
+            value: 'asc',
+        },
+    ],
+    price: [
+        {
+            label: 'Pricey',
+            value: 'desc',
+        },
+        {
+            label: 'Cheapest',
+            value: 'asc',
+        },
+    ],
+};
 
-const sortOptions = computed(() => sortLabels[filterForm.by])
 const props = defineProps({
-  filters: Object,
-})
+    filters: Object,
+});
+
 const filterForm = reactive({
-  deleted: props.filters.deleted ?? false,
-  by: props.filters.by ?? 'created_at',
-  order: props.filters.order ?? 'desc',
-})
-watch(
-  filterForm, debounce(() => Inertia.get(
-    route('realtor.listing.index'),
-    filterForm,
-    { preserveState: true, preserveScroll: true },
-  ), 1000),
-)
+    ...props.filters, // Initialize filterForm with props.filters values
+    deleted: props.filters.deleted?? false,
+    by: props.filters.by?? 'created_at',
+    order: props.filters.order?? 'desc',
+});
+
+const sortOptions = computed(() => sortLabels[filterForm.by]);
+const onlyParams = ['listings'];
+
+watch(filterForm, debounce(() => {
+    const queryParams = new URLSearchParams();
+    queryParams.append('deleted', filterForm.deleted.toString());
+    queryParams.append('by', filterForm.by);
+    queryParams.append('order', filterForm.order);
+
+    // Use Inertia.visit for navigation, ensuring we don't cause a full page reload
+    Inertia.visit(route('realtor.listing.index') + '?' + queryParams.toString(), {
+        only: ['listing', 'offerMade'],
+        preserveState: true,
+        preserveScroll: true,
+    });
+}, 1000));
 </script>
