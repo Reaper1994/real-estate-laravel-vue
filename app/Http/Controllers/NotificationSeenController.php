@@ -12,7 +12,7 @@ class NotificationSeenController extends Controller
      */
     public function __invoke(DatabaseNotification $notification)
     {
-        $this->authorize('update', $notification);
+//        $this->authorize('index', $notification);
         $notification->markAsRead();
 
         return redirect()->back()
