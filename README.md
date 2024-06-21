@@ -62,7 +62,7 @@ This project is a demo web application built with Laravel and Vue, I've been itc
 
 1. **Register as a realtor or user**: Sign up and log in to access the features.
 2. **List a property**: Realtors can list new properties with all necessary details.
-3. **Make an offer**: Users can browse listed properties, select the interest rate, duration, which accordingly calculates the due amount, and submit their offers.
+3. **Make an offer**: Users can browse listed properties, select the interest rate, and duration, which accordingly calculates the due amount, and submit their offers.
 4. **Manage offers**: Realtors can view offers on their properties, and accept or reject them.
 5. **Receive notifications**: Users and realtors receive notifications about offers and offer statuses.
 
