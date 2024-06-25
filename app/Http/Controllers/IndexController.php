@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Hash;
 
 class IndexController extends Controller
 {
-    public function index()
+    public function index(): \Inertia\Response|\Inertia\ResponseFactory
     {
         return inertia(
             'Index/Index',
@@ -19,7 +19,7 @@ class IndexController extends Controller
         );
     }
 
-    public function show()
+    public function show(): \Inertia\Response|\Inertia\ResponseFactory
     {
         return inertia('Index/Show');
     }

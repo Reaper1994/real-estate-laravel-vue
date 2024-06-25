@@ -10,7 +10,7 @@ class NotificationSeenController extends Controller
     /**
      * @throws AuthorizationException
      */
-    public function __invoke(DatabaseNotification $notification)
+    public function __invoke(DatabaseNotification $notification): \Illuminate\Http\RedirectResponse
     {
 //        $this->authorize('index', $notification);
         $notification->markAsRead();

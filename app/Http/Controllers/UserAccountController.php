@@ -10,12 +10,12 @@ use Illuminate\Support\Facades\Hash;
 
 class UserAccountController extends Controller
 {
-    public function create()
+    public function create(): \Inertia\Response|\Inertia\ResponseFactory
     {
         return inertia('UserAccount/Create');
     }
 
-    public function store(Request $request)
+    public function store(Request $request): \Illuminate\Http\RedirectResponse
     {
         $user = User::create($request->validate([
             'name' => 'required',
