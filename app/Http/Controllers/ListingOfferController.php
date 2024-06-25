@@ -9,7 +9,7 @@ use App\Notifications\OfferMade;
 
 class ListingOfferController extends Controller
 {
-    public function store(Listing $listing, Request $request)
+    public function store(Listing $listing, Request $request): \Illuminate\Http\RedirectResponse
     {
         $this->authorize('view', $listing);
 

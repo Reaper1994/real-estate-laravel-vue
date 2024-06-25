@@ -19,7 +19,7 @@ class AuthController extends Controller
         return inertia('Auth/Login');
     }
 
-    public function store(Request $request)
+    public function store(Request $request): RedirectResponse
     {
         if (!Auth::attempt($request->validate([
             'email' => 'required|string|email',
