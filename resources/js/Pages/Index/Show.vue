@@ -1,6 +1,6 @@
-<template>
-  <div>Show</div>
-  <Link href="/">Main Page</Link>
+<template >
+  <div class="text-white">Show</div>
+  <Link class="text-white" href="/">Main Page</Link>
 </template>
 
 <script setup>
