@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Listing;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Inertia\Inertia;
 
 class RealtorListingController extends Controller
 {
@@ -46,9 +47,9 @@ class RealtorListingController extends Controller
     /**
      * Show the form for creating a new resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Inertia\Response
      */
-    public function create(): \Illuminate\Http\Response
+    public function create(): \Inertia\Response
     {
         // $this->authorize('create', Listing::class);
         return inertia('Realtor/Create');
