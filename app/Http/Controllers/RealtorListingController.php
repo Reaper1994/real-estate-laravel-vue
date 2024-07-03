@@ -59,9 +59,9 @@ class RealtorListingController extends Controller
      * Store a newly created resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return \Inertia\Response
+     * @return \Illuminate\Http\RedirectResponse
      */
-    public function store(Request $request):  \Inertia\Response
+    public function store(Request $request): \Illuminate\Http\RedirectResponse
     {
         $request->user()->listings()->create(
             $request->validate([
