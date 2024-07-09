@@ -7,6 +7,9 @@ use App\Models\ListingImage;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 
+/**
+ *
+ */
 class RealtorListingImageController extends Controller
 {
     public function create(Listing $listing): \Inertia\Response|\Inertia\ResponseFactory
