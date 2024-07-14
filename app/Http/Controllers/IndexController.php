@@ -9,15 +9,6 @@ use Illuminate\Support\Facades\Hash;
 
 class IndexController extends Controller
 {
-    public function index(): \Inertia\Response|\Inertia\ResponseFactory
-    {
-        return inertia(
-            'Index/Index',
-            [
-                'message' => 'Hello from Laravel!'
-            ]
-        );
-    }
 
     public function show(): \Inertia\Response|\Inertia\ResponseFactory
     {
